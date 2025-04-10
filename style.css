@@ -1,0 +1,47 @@
+.bar {
+    background-color: #f7941e;
+    height: 45px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    position: fixed;
+    margin-top: 20px;
+    top: 30px;
+    left: 240px;
+}
+
+.nav-bar {
+    position: fixed;
+    margin-top: 10px;
+    top: 140px;
+    left: 240px;
+    overflow: hidden;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-bar li {
+    position: relative;
+}
+
+.nav-bar li:hover{
+    background-color: #f7941e;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    z-index: 1;
+}
