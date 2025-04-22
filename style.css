@@ -37,7 +37,7 @@
     display: flex;
     z-index: 1000;
     padding: 2px 3px 0 3px;
-    /* font quando possibile */
+    /* TODO font quando possibile */
 }
 
 .navigation .nav-bar > ul {
@@ -203,12 +203,17 @@
     display: flex;
     color: #999;
     font-size: 17px;
+    padding: 0 10px 0 0;
     font-family: Lato,Helvetica,Arial,sans-serif;
 }
 
 .event-nav li:hover {
     color: #f7941e;
     cursor: pointer;
+}
+
+.right-bar {
+    border-right: 1px solid #ccc;
 }
 
 .activities-filter-navigation {
@@ -221,11 +226,11 @@
     padding: 0;
 }
 
-.activities-filter > ul {
+.activities-filter ul {
     list-style: none;
     display: flex;
-    gap: 25px;
-    margin: 15px 0 0 0;
+    gap: 22px;
+    margin: 7px 0 0 0;
     padding: 0;
     width: 100%;
 }
@@ -235,11 +240,103 @@
     font-size: 16px;
     font-weight: 400;
     font-family: Montserrat, Helvetica, sans-serif;
-    padding: 3px;
+    padding: 5px 3px 5px 3px;
+    user-select: none;
 }
 
 .activities-filter li:hover {
     background-color: #f7941e;
     color: white;
     cursor: pointer;
+}
+
+.activities-filter li.active {
+    background-color: #f7941e;
+    color: white;
+}
+
+/* liste di selettori in base all'attività selezionata */
+
+.selectors-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.selectors-list select {
+    width: 325px;
+    height: 40px;
+    border: 1px solid #ccc;
+    margin: 5px 0 5px 0;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.selectors-list option {
+    padding: 30px;
+}
+
+.selectors-list input {
+    width: 252px;
+    height: 40px;
+    border: 1px solid #ccc;
+    margin: 3px 0 3px 0;
+}
+
+.selectors-list input::placeholder {
+    color: #999;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px;
+}
+
+.go-button {
+    height: 43px;
+    width: 65px;
+    background: white;
+    border: 1px solid #ccc;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 8px 0 10px 0;
+}
+
+.go-button:hover {
+    background-color: #f7941e;
+    color: white;
+    cursor: pointer;
+}
+
+.panel {
+    display:none;
+    padding:16px 0;
+}
+
+.panel.active {
+    display:block;
+}
+
+.or-divider-div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.or-divider { /* linee grigie*/
+    flex:1;
+    max-width:135px;
+    height:1px;
+    background:#ccc;
+    margin:0;
+    padding:0;
+}
+
+.movies-or-divider-text{
+    font-weight: 200;
+    color: #9b9b9b;
+    margin: 0;
 }

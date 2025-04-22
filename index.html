@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
     <title>Orlando Weekly</title>
 </head>
 <body>
@@ -146,11 +147,11 @@
                     <img class="pointer-on-hover" src="images/mainEventPlaceHolder.jpeg">
                     <h3 class="main-event-title"> Questo è il titolo di un evento</h3>
                     <p class="event-location"> @Milano </p>
-                    <p class="event-info"> Gio, 23 Aprile, 17.30 </p>
+                    <p class="event-info"> Gio, 24 Aprile, 17.30 </p>
                     <div class="events-navigation">
                         <nav class="event-nav">
                             <ul>
-                                <li> <img src="images/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"> All today's events </li>
+                                <li class="right-bar"> <img src="images/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"> All today's events </li>
                                 <li>  Staff Picks </li>
                             </ul>
                         </nav>
@@ -158,12 +159,462 @@
                     <div class="activities-filter-navigation">
                         <nav class="activities-filter">
                             <ul>
-                                <li> EVENTS </li>
-                                <li> MUSIC </li>
-                                <li> MOVIES </li>
-                                <li> DINING </li>
+                                <li data-panel="panel-events"> EVENTS </li> <!-- data-panel collega il <li> alla div giusta tramite js -->
+                                <li data-panel="panel-music"> MUSIC </li>
+                                <li data-panel="panel-movies"> MOVIES </li>
+                                <li data-panel="panel-dining"> DINING </li>
                             </ul>
                         </nav>
+                    </div>
+                    <div class="selectors">
+                        <div class="panel" id="panel-events">
+                            <ul class="selectors-list">
+                                <li>
+                                    <select>
+                                        <option>Giovedì 24 Aprile</option>
+                                        <option>Venerdì 25 Aprile</option>
+                                        <option>Sabato 26 Aprile</option>
+                                        <option>Domenica 27 Aprile</option>
+                                        <option>Lunedì 28 Aprile</option>
+                                        <option>Martedì 29 Aprile</option>
+                                        <option>Mercoledì 30 Aprile</option>
+                                        <option>Giovedì 1 Maggio</option>
+                                        <option>Venerdì 2 Maggio</option>
+                                        <option>Sabato 3 Maggio</option>
+                                        <option>Domenica 4 Maggio</option>
+                                        <option>Lunedì 5 Maggio</option>
+                                        <option>Martedì 6 Maggio</option>
+                                        <option>Mercoledì 7 Maggio</option>
+                                        <option>Giovedì 8 Maggio</option>
+                                        <option>Venerdì 9 Maggio</option>
+                                        <option>Sabato 10 Maggio</option>
+                                        <option>Domenica 11 Maggio</option>
+                                        <option>Lunedì 12 Maggio</option>
+                                        <option>Martedì 13 Maggio</option>
+                                        <option>Mercoledì 14 Maggio</option>
+                                        <option>Giovedì 15 Maggio</option>
+                                        <option>Venerdì 16 Maggio</option>
+                                        <option>Sabato 17 Maggio</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <select>
+                                        <option> -All Categories- </option>
+                                        <option>Art: Classes</option>
+                                        <option>Art: Exhibition</option>
+                                        <option>Art: Opening</option>
+                                        <option>Civics</option>
+                                        <option>Comedy</option>
+                                        <option>Comedy: Improv</option>
+                                        <option>Comedy: Standup</option>
+                                        <option>Dance</option>
+                                        <option>Dance: Ballet</option>
+                                        <option>Dance: Burlesque</option>
+                                        <option>Dance: Modern</option>
+                                        <option>Events</option>
+                                        <option>Events: Food & Drink</option>
+                                        <option>Events: Markets</option>
+                                        <option>Events: Parties</option>
+                                        <option>Events: Trade Shows</option>
+                                        <option>Fall Guide</option>
+                                        <option>Family</option>
+                                        <option>Holiday</option>
+                                        <option>Holiday: Christmas</option>
+                                        <option>Holiday: Easter</option>
+                                        <option>Holiday: Father's Day</option>
+                                        <option>Holiday: Fourth of July</option>
+                                        <option>Holiday: Halloween</option>
+                                        <option>Holiday: Hanukkah</option>
+                                        <option>Holiday: Mother's Day</option>
+                                        <option>Holiday: New Year's</option>
+                                        <option>Holiday: Thanksgiving</option>
+                                        <option>Holiday: Valentine's Day</option>
+                                        <option>LGBTQ</option>
+                                        <option>Learning</option>
+                                        <option>Learning: Cooking</option>
+                                        <option>Learning: Crafts</option>
+                                        <option>Literary</option>
+                                        <option>Literary: Classes</option>
+                                        <option>Literary: Poetry</option>
+                                        <option>Literary: Readings & Signings</option>
+                                        <option>Shopping</option>
+                                        <option>Sports</option>
+                                        <option>Sports: Running</option>
+                                        <option>Sports: Yoga</option>
+                                        <option>Spring Guide</option>
+                                        <option>Tabletop Games</option>
+                                        <option>Theater</option>
+                                        <option>Theater: Opera</option>
+                                        <option>Trivia</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <select>
+                                        <option>-All Neighborhoods-</option>
+                                        <option>Apopka</option>
+                                        <option>Audubon Park</option>
+                                        <option>Baldwin Park</option>
+                                        <option>Belle Isle</option>
+                                        <option>Casselberry</option>
+                                        <option>Central</option>
+                                        <option>College Park</option>
+                                        <option>Colonialtown</option>
+                                        <option>Conway/Curry Ford</option>
+                                        <option>Disney</option>
+                                        <option>Downtown</option>
+                                        <option>Dr. Phillips</option>
+                                        <option>East</option>
+                                        <option>Edgewood</option>
+                                        <option>Elsewhere</option>
+                                        <option>Eola Heights</option>
+                                        <option>I-Drive/Universal</option>
+                                        <option>Ivanhoe Village</option>
+                                        <option>Kissimmee</option>
+                                        <option>Lake Nona</option>
+                                        <option>Milk District</option>
+                                        <option>Mills 50</option>
+                                        <option>Mount Dora</option>
+                                        <option>New Smyrna</option>
+                                        <option>North</option>
+                                        <option>North Florida</option>
+                                        <option>Online Only</option>
+                                        <option>Sanford</option>
+                                        <option>SoDo</option>
+                                        <option>South</option>
+                                        <option>South Eola</option>
+                                        <option>Thornton Park</option>
+                                        <option>UCF</option>
+                                        <option>West Orlando</option>
+                                        <option>Winter Park Area</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <input type="text" placeholder="ENTER KEYWORDS...">
+                                    <!--TODO aggiungere immagine lente-->
+                                    <button class="go-button"> GO </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel" id="panel-music">
+                            <ul class="selectors-list">
+                                <li>
+                                    <select>
+                                        <option>Giovedì 24 Aprile</option>
+                                        <option>Venerdì 25 Aprile</option>
+                                        <option>Sabato 26 Aprile</option>
+                                        <option>Domenica 27 Aprile</option>
+                                        <option>Lunedì 28 Aprile</option>
+                                        <option>Martedì 29 Aprile</option>
+                                        <option>Mercoledì 30 Aprile</option>
+                                        <option>Giovedì 1 Maggio</option>
+                                        <option>Venerdì 2 Maggio</option>
+                                        <option>Sabato 3 Maggio</option>
+                                        <option>Domenica 4 Maggio</option>
+                                        <option>Lunedì 5 Maggio</option>
+                                        <option>Martedì 6 Maggio</option>
+                                        <option>Mercoledì 7 Maggio</option>
+                                        <option>Giovedì 8 Maggio</option>
+                                        <option>Venerdì 9 Maggio</option>
+                                        <option>Sabato 10 Maggio</option>
+                                        <option>Domenica 11 Maggio</option>
+                                        <option>Lunedì 12 Maggio</option>
+                                        <option>Martedì 13 Maggio</option>
+                                        <option>Mercoledì 14 Maggio</option>
+                                        <option>Giovedì 15 Maggio</option>
+                                        <option>Venerdì 16 Maggio</option>
+                                        <option>Sabato 17 Maggio</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <select>
+                                        <option> -All Categories- </option>
+                                        <option>Clubs/Lounges</option>
+                                        <option>Concerts/Events</option>
+                                        <option>Karaoke</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <select>
+                                        <option>-All Neighborhoods-</option>
+                                        <option>Apopka</option>
+                                        <option>Audubon Park</option>
+                                        <option>Baldwin Park</option>
+                                        <option>Belle Isle</option>
+                                        <option>Casselberry</option>
+                                        <option>Central</option>
+                                        <option>College Park</option>
+                                        <option>Colonialtown</option>
+                                        <option>Conway/Curry Ford</option>
+                                        <option>Disney</option>
+                                        <option>Downtown</option>
+                                        <option>Dr. Phillips</option>
+                                        <option>East</option>
+                                        <option>Edgewood</option>
+                                        <option>Elsewhere</option>
+                                        <option>Eola Heights</option>
+                                        <option>I-Drive/Universal</option>
+                                        <option>Ivanhoe Village</option>
+                                        <option>Kissimmee</option>
+                                        <option>Lake Nona</option>
+                                        <option>Milk District</option>
+                                        <option>Mills 50</option>
+                                        <option>Mount Dora</option>
+                                        <option>New Smyrna</option>
+                                        <option>North</option>
+                                        <option>North Florida</option>
+                                        <option>Online Only</option>
+                                        <option>Sanford</option>
+                                        <option>SoDo</option>
+                                        <option>South</option>
+                                        <option>South Eola</option>
+                                        <option>Thornton Park</option>
+                                        <option>UCF</option>
+                                        <option>West Orlando</option>
+                                        <option>Winter Park Area</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <input type="text" placeholder="ENTER KEYWORDS...">
+                                    <!--TODO aggiungere immagine lente-->
+                                    <button class="go-button"> GO </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel" id="panel-movies">
+                            <ul class="selectors-list">
+                                <li>
+                                    <select>
+                                        <option>Select a movie</option>
+                                        <option>A Minecraft Movie</option>
+                                        <option>AWorking Man ?</option>
+                                        <option>Alappuzha Gymkhana</option>
+                                        <option>Arjun S/O Vyjayanthi</option>
+                                        <option>Captain America: Brave New World</option>
+                                        <option>Colorful Stage! The Movie: A Miku Who Can't Sing</option>
+                                        <option>Death of a Unicorn</option>
+                                        <option>Disney's Snow White</option>
+                                        <option>Drop</option>
+                                        <option>Good Bad Ugly</option>
+                                        <option>Hell of a Summer</option>
+                                        <option>It Feeds</option>
+                                        <option>Kesari Chapter 2: The Untold Story of Jallianwala Bagh</option>
+                                        <option>One to One: John & Yoko</option>
+                                        <option>Pride & Prejudice 20th Anniversary Re-release</option>
+                                        <option>Sacramento</option>
+                                        <option>Siko Siko</option>
+                                        <option>Sinners</option>
+                                        <option>Sneak Peek Showcase</option>
+                                        <option>Sneaks</option>
+                                        <option>The Amateur</option>
+                                        <option>The Ballad of Wallis Island</option>
+                                        <option>The Chosen: Last Supper Part 1</option>
+                                        <option>The Chosen: Last Supper Part 2</option>
+                                        <option>The Chosen: Last Supper Part 3</option>
+                                        <option>The King of Kings</option>
+                                        <option>The Teacher</option>
+                                        <option>The Ugly Stepsister</option>
+                                        <option>The Wedding Banquet</option>
+                                        <option>The Woman in the Yard</option>
+                                        <option>Warfare</option>
+
+                                    </select>
+                                </li>
+                                <div class="or-divider-div">
+                                    <span class="or-divider"></span>
+                                    <h4 class="movies-or-divider-text">OR</h4>
+                                    <span class="or-divider"></span>
+                                </div>
+                                <li>
+                                    <select>
+                                        <option>Select a location</option>
+                                        <option>Central</option>
+                                        <option>- Orlando Fashion Square</option>
+                                        <option></option>
+                                        <option>Disney</option>
+                                        <option>- AMC Disney Springs 24</option>
+                                        <option>- Studio Movie Grill Sunset Walk</option>
+                                        <option></option>
+                                        <option>East</option>
+                                        <option>- AMC West Oaks 14</option>
+                                        <option>- Regal Waterford Lakes Stadium 20 & IMAX</option>
+                                        <option></option>
+                                        <option>Elsewhere</option>
+                                        <option>- Cinepolis Luxury Cinema Hamlin</option>
+                                        <option></option>
+                                        <option>I-Drive/Universal</option>
+                                        <option>- Cinemark Orlando and XD</option>
+                                        <option></option>
+                                        <option>- The Cowfish Sushi Burger Bar</option>
+                                        <option>- Regal Pointe Orlando 4DX & IMAX</option>
+                                        <option></option>
+                                        <option>North</option>
+                                        <option>- AMC Altamonte Mall 18</option>
+                                        <option>- AMC Lake Square 12</option>
+                                        <option>- AmStar 12 - Lake Mary</option>
+                                        <option>- Regal Oviedo Marketplace 22</option>
+                                        <option></option>
+                                        <option>South</option>
+                                        <option>- Cinépolis Polk County IMAX</option>
+                                        <option>- Regal The Loop & RPX</option>
+                                        <option></option>
+                                        <option>West Orlando</option>
+                                        <option>- Regal Wekiva Riverwalk</option>
+                                        <option>- West Orange Cinema</option>
+                                        <option></option>
+                                        <option>Winter Park Area</option>
+                                        <option>- Regal Cinemas Winter Park Village 20</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel" id="panel-dining">
+                            <ul class="selectors-list">
+                                <li class="first-in-selector-list">
+                                    <select>
+                                        <option> -All Categories- </option>
+                                        <option>African</option>
+                                        <option>American</option>
+                                        <option>Armenian</option>
+                                        <option>Bakery</option>
+                                        <option>Barbecue</option>
+                                        <option>Brazilian</option>
+                                        <option>Breakfast/Brunch</option>
+                                        <option>Brewpub</option>
+                                        <option>Burgers</option>
+                                        <option>Café/Bistro</option>
+                                        <option>Cajun/Creole</option>
+                                        <option>Caribbean</option>
+                                        <option>Chinese</option>
+                                        <option>Coffee house (chain)</option>
+                                        <option>Coffee house (independent)</option>
+                                        <option>Contemporary</option>
+                                        <option>Cuban</option>
+                                        <option>Deli</option>
+                                        <option>Desserts</option>
+                                        <option>Diner</option>
+                                        <option>Dutch</option>
+                                        <option>Eastern European</option>
+                                        <option>Egyptian</option>
+                                        <option>Eritrean</option>
+                                        <option>Ethiopian</option>
+                                        <option>European</option>
+                                        <option>Filipino</option>
+                                        <option>Filipino-American</option>
+                                        <option>Fondue</option>
+                                        <option>Food Hall</option>
+                                        <option>Food Truck</option>
+                                        <option>French</option>
+                                        <option>General</option>
+                                        <option>General Fare</option>
+                                        <option>German</option>
+                                        <option>Greek</option>
+                                        <option>Hawaiian</option>
+                                        <option>Hot Dogs</option>
+                                        <option>Ice Cream</option>
+                                        <option>Indian</option>
+                                        <option>Indonesian</option>
+                                        <option>Irish</option>
+                                        <option>Israeli</option>
+                                        <option>Italian</option>
+                                        <option>Jamaican</option>
+                                        <option>Japanese</option>
+                                        <option>Japanese/Sushi</option>
+                                        <option>Juice</option>
+                                        <option>Korean</option>
+                                        <option>Kosher</option>
+                                        <option>Laotian</option>
+                                        <option>Latin American</option>
+                                        <option>Lebanese</option>
+                                        <option>Malaysian</option>
+                                        <option>Market</option>
+                                        <option>Mediterranean</option>
+                                        <option>Mexican</option>
+                                        <option>Middle Eastern</option>
+                                        <option>Modern American</option>
+                                        <option>Mongolian</option>
+                                        <option>Moroccan</option>
+                                        <option>Noodles</option>
+                                        <option>Pan-Asian</option>
+                                        <option>Persian</option>
+                                        <option>Peruvian</option>
+                                        <option>Pizza</option>
+                                        <option>Poké</option>
+                                        <option>Polish</option>
+                                        <option>Pub Grub</option>
+                                        <option>Puerto Rican</option>
+                                        <option>Russian</option>
+                                        <option>Salads</option>
+                                        <option>Sandwiches/Subs</option>
+                                        <option>Saudi</option>
+                                        <option>Saudi-Indonesian</option>
+                                        <option>Seafood</option>
+                                        <option>Soup</option>
+                                        <option>Southern/Soul</option>
+                                        <option>Spanish</option>
+                                        <option>Sri Lankan</option>
+                                        <option>Steakhouse</option>
+                                        <option>Swedish</option>
+                                        <option>Sweets</option>
+                                        <option>Tapas</option>
+                                        <option>Tea</option>
+                                        <option>Tex-Mex</option>
+                                        <option>Thai</option>
+                                        <option>Turkish</option>
+                                        <option>Ukrainian</option>
+                                        <option>Uzbek</option>
+                                        <option>Vegetarian/Vegan</option>
+                                        <option>Vietnamese</option>
+                                        <option>Wine</option>
+
+                                    </select>
+                                </li>
+                                <li>
+                                    <select>
+                                        <option>-All Neighborhoods-</option>
+                                        <option>Apopka</option>
+                                        <option>Audubon Park</option>
+                                        <option>Baldwin Park</option>
+                                        <option>Belle Isle</option>
+                                        <option>Casselberry</option>
+                                        <option>Central</option>
+                                        <option>College Park</option>
+                                        <option>Colonialtown</option>
+                                        <option>Conway/Curry Ford</option>
+                                        <option>Disney</option>
+                                        <option>Downtown</option>
+                                        <option>Dr. Phillips</option>
+                                        <option>East</option>
+                                        <option>Edgewood</option>
+                                        <option>Elsewhere</option>
+                                        <option>Eola Heights</option>
+                                        <option>I-Drive/Universal</option>
+                                        <option>Ivanhoe Village</option>
+                                        <option>Kissimmee</option>
+                                        <option>Lake Nona</option>
+                                        <option>Milk District</option>
+                                        <option>Mills 50</option>
+                                        <option>Mount Dora</option>
+                                        <option>New Smyrna</option>
+                                        <option>North</option>
+                                        <option>North Florida</option>
+                                        <option>Online Only</option>
+                                        <option>Sanford</option>
+                                        <option>SoDo</option>
+                                        <option>South</option>
+                                        <option>South Eola</option>
+                                        <option>Thornton Park</option>
+                                        <option>UCF</option>
+                                        <option>West Orlando</option>
+                                        <option>Winter Park Area</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <input type="text" placeholder="ENTER KEYWORDS...">
+                                    <!--TODO aggiungere immagine lente-->
+                                    <button class="go-button"> GO </button>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
