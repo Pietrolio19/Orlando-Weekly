@@ -15,6 +15,10 @@
     margin-left: 225px;
 }
 
+.logo:hover {
+    cursor: pointer;
+}
+
 /* barra di navigazione */
 
 .navigation { /* div per la barra di navigazione */
@@ -98,10 +102,26 @@
     margin-top: 20px;
 }
 
-.main-article-title {
-    margin-top: 0;
+.pointer-on-hover:hover {
+    cursor: pointer;
 }
 
+.main-article-title {
+    margin: 0;
+}
+
+.main-article-title:hover {
+    color: #f7941e;
+    cursor: pointer;
+}
+
+.article-summary{
+    margin: 5px 5px 5px 0;
+}
+
+.article-info{
+    margin: 5px 5px 5px 0;
+}
 
 /* events */
 .events {
@@ -131,9 +151,95 @@
     letter-spacing: 2px;
     color: #f7931e;
     font-family: "Montserrat", sans-serif;
+
+}
+
+.events-title:hover {
+    color: black;
+    cursor: pointer;
 }
 
 .main-event-title {
-    margin-top: 0;
+    margin: 0;
 }
 
+.main-event-title:hover {
+    color: #f7941e;
+    cursor: pointer;
+}
+
+.event-location {
+    margin: 6px 0 6px 0;
+    font-size: 14px;
+}
+
+.event-info {
+    margin: 6px 0 6px 0;
+    font-size: 14px;
+}
+
+.events-navigation {
+    margin-right: 250px;
+}
+
+.event-nav {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+    padding: 0;
+}
+
+.event-nav > ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    margin: 10px 0 0 0;
+    padding: 0 0 3px 0;
+    justify-content: center;
+    width: 100%;
+}
+
+.event-nav li {
+    display: flex;
+    color: #999;
+    font-size: 17px;
+    font-family: Lato,Helvetica,Arial,sans-serif;
+}
+
+.event-nav li:hover {
+    color: #f7941e;
+    cursor: pointer;
+}
+
+.activities-filter-navigation {
+    margin-right: 250px;
+}
+
+.activities-filter {
+    display: flex;
+    margin:0;
+    padding: 0;
+}
+
+.activities-filter > ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 15px 0 0 0;
+    padding: 0;
+    width: 100%;
+}
+
+.activities-filter li {
+    color: #999;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Montserrat, Helvetica, sans-serif;
+    padding: 3px;
+}
+
+.activities-filter li:hover {
+    background-color: #f7941e;
+    color: white;
+    cursor: pointer;
+}
