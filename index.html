@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="bar"></div>
-        <img class="logo" src="images/placeHoldLogo.jpeg">
+        <img src="images/placeHoldLogo.jpeg" class="logo">
     </header>
 
     <div class="navigation">
@@ -123,29 +123,29 @@
                         </ul>
                     </div>
                 </li>
-                <li><img class="pointer-on-hover" src="images/person_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"></li>
-                <li><img class="pointer-on-hover" src="images/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"></li>
+                <li><img src="images/person_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" class="pointer-on-hover"></li>
+                <li><img src="images/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" class="pointer-on-hover"></li>
             </ul>
         </nav>
     </div>
 
     <main>
-        <section>
-            <div class="flex-box">
-                <div class="article">
-                    <img class="pointer-on-hover" src="images/mainArticlePlaceHolder.jpeg">
-                    <h1 class="main-article-title"> Questo è un articolo </h1>
-                    <p class="article-summary"> Riassunto dell'articolo </p>
-                    <p class="article-info"> Di Pietro Madioni |21 Aprile, 2025 </p>
-                </div>
-                <div class="events">
+        <section id="hero">
+            <div class="flex-box"> <!-- div per layout main article e events -->
+                <article class="main-article">
+                    <img src="images/mainArticlePlaceHolder.jpeg" class="pointer-on-hover">
+                    <h3 class="main-article-title"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h3>
+                    <p class="article-summary"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p class="article-info"> Di Lorem Ipsum |21 Aprile, 2025 </p>
+                </article> <!-- main article -->
+                <div class="events"> <!-- zona eventi -->
                     <div class="head">
                         <span class="divider"></span>
                         <h3 class="events-title">EVENTS</h3>
                         <span class="divider"></span>
-                    </div>
-                    <img class="pointer-on-hover" src="images/mainEventPlaceHolder.jpeg">
-                    <h3 class="main-event-title"> Questo è il titolo di un evento</h3>
+                    </div> <!-- testata -->
+                    <img src="images/mainEventPlaceHolder.jpeg" class="pointer-on-hover">
+                    <h3 class="title-style"> Lorem Ipsum </h3>
                     <p class="event-location"> @Milano </p>
                     <p class="event-info"> Gio, 24 Aprile, 17.30 </p>
                     <div class="events-navigation">
@@ -165,7 +165,7 @@
                                 <li data-panel="panel-dining"> DINING </li>
                             </ul>
                         </nav>
-                    </div>
+                    </div>  <!-- menu orizzontale per filtrare le attività -->
                     <div class="selectors">
                         <div class="panel" id="panel-events">
                             <ul class="selectors-list">
@@ -615,10 +615,32 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> <!-- diverse liste di selettori, cambiano, tramite js, in base a quale attività si seleziona -->
                 </div>
             </div>
+        </section> <!-- Parte Principale -->
+        <section id="featured-articles">
+            <div class="flex-box featured">
+                <article class="medium-article orange-text-on-hover">
+                    <img src="images/mediumArticlePlaceHolder.jpeg">
+                    <h3 class="title-style orange-text"> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</h3>
+                    <p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. </p>
+                    <p> Lorem Ipsum | 23 Aprile, 2025</p>
+                </article>
+                <article class="medium-article orange-text-on-hover">
+                    <img src="images/mediumArticlePlaceHolder.jpeg">
+                    <h3 class="title-style orange-text">Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</h3>
+                    <p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. </p>
+                    <p> Lorem Ipsum | 23 Aprile, 2025</p>
+                </article>
+
+            </div>
+
+        </section> <!-- Articoli sotto la parte principale "featured" -->
+        <section id="the-latest">
+
         </section>
     </main>
 </body>
 </html>
+
