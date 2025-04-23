@@ -95,6 +95,7 @@
 }
 
 /* main article */
+
 .flex-box { /* per affiancare le div*/
     display: flex;
     gap: 24px;
@@ -154,7 +155,6 @@
     letter-spacing: 2px;
     color: #f7931e;
     font-family: "Montserrat", sans-serif;
-
 }
 
 .events-title:hover {
@@ -365,4 +365,41 @@
 
 .orange-text-on-hover:hover .orange-text {
     color: #f7941e;
+}
+
+/* the latest */
+
+.article-grid {
+    margin: 50px 0 0 235px;
+}
+
+.article-grid-title {
+    margin: 0;
+    font-size: 26px;
+    border: 3px solid white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #f7931e;
+    font-family: "Montserrat", sans-serif;
+}
+
+.grid-divider {
+    max-width: 395px;
+}
+
+.grid-layout {
+    margin: 0 245px 0 235px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+}
+
+.grid-title {
+    line-height: 1.2;
+}
+
+.grid-layout p {
+    font-size: 14px;
+    margin-top: 7px;
+    margin-bottom: 0;
 }
