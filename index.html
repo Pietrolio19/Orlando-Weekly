@@ -130,7 +130,7 @@
         </nav>
     </div>
 
-    <main>
+    <main> <!-- TODO modificare la struttura: margin-left=0 per tutti gli elementi -> è il main che contiene tutto e lo distanzia a sx e a dx -->
         <section id="hero">
             <div class="flex-box"> <!-- div per layout main article e events -->
                 <article class="main-article">
@@ -695,22 +695,22 @@
                         <h3 class="article-grid-title">NEWS</h3>
                         <span class="divider news"></span>
                     </div>
-                    <div class="flex-box news-arts-food-music">
+                    <article class="flex-box news-arts-food-music">
                         <div class="img-wrapper"> <!-- necessario per non far deformare l'immagine se il testo di h3 la supera in altezza -->
                             <img src="images/smallArticlePlaceHolder.jpeg" class="pointer-on-hover small-article">
                         </div>
                         <div class="title-wrapper">
                             <h3 class="title-style">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam</h3>
                         </div>
-                    </div>
-                    <div class="flex-box news-arts-food-music">
+                    </article>
+                    <article class="flex-box news-arts-food-music">
                         <div class="img-wrapper">
                             <img src="images/smallArticlePlaceHolder.jpeg" class="pointer-on-hover small-article">
                         </div>
                         <div class="title-wrapper">
                             <h3 class="title-style">Quis autem vel eum iure reprehenderit qui in ea voluptate</h3>
                         </div>
-                    </div>
+                    </article>
                     <button class="more"> MORE NEWS > </button>
                     <nav class="more-info-nav">
                         <ul>
@@ -725,22 +725,22 @@
                         <h3 class="article-grid-title">FOOD+DRINK</h3>
                         <span class="divider food"></span>
                     </div>
-                    <div class="flex-box news-arts-food-music">
+                    <article class="flex-box news-arts-food-music">
                         <div class="img-wrapper"> <!-- necessario per non far deformare l'immagine se il testo di h3 la supera in altezza -->
                             <img src="images/smallArticlePlaceHolder.jpeg" class="pointer-on-hover small-article">
                         </div>
                         <div class="title-wrapper">
                             <h3 class="title-style">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur</h3>
                         </div>
-                    </div>
-                    <div class="flex-box news-arts-food-music">
+                    </article>
+                    <article class="flex-box news-arts-food-music">
                         <div class="img-wrapper">
                             <img src="images/smallArticlePlaceHolder.jpeg" class="pointer-on-hover small-article">
                         </div>
                         <div class="title-wrapper">
                             <h3 class="title-style">Vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</h3>
                         </div>
-                    </div>
+                    </article>
                     <button class="more food-button"> MORE FOOD + DRINK > </button>
                     <nav class="more-info-nav">
                         <ul>
@@ -755,22 +755,22 @@
                         <h3 class="article-grid-title">ARTS+CULTURE</h3>
                         <span class="divider arts"></span>
                     </div>
-                    <div class="flex-box news-arts-food-music">
+                    <article class="flex-box news-arts-food-music">
                         <div class="img-wrapper"> <!-- necessario per non far deformare l'immagine se il testo di h3 la supera in altezza -->
                             <img src="images/smallArticlePlaceHolder.jpeg" class="pointer-on-hover small-article">
                         </div>
                         <div class="title-wrapper">
                             <h3 class="title-style">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti</h3>
                         </div>
-                    </div>
-                    <div class="flex-box news-arts-food-music">
+                    </article>
+                    <article class="flex-box news-arts-food-music">
                         <div class="img-wrapper">
                             <img src="images/smallArticlePlaceHolder.jpeg" class="pointer-on-hover small-article">
                         </div>
                         <div class="title-wrapper">
                             <h3 class="title-style">Atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</h3>
                         </div>
-                    </div>
+                    </article>
                     <button class="more arts-button"> MORE ARTS + CULTURE > </button>
                     <nav class="more-info-nav">
                         <ul>
@@ -785,22 +785,22 @@
                         <h3 class="article-grid-title">MUSIC</h3>
                         <span class="divider music"></span>
                     </div>
-                    <div class="flex-box news-arts-food-music">
+                    <article class="flex-box news-arts-food-music">
                         <div class="img-wrapper"> <!-- necessario per non far deformare l'immagine se il testo di h3 la supera in altezza -->
                             <img src="images/smallArticlePlaceHolder.jpeg" class="pointer-on-hover small-article">
                         </div>
                         <div class="title-wrapper">
                             <h3 class="title-style">Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga</h3>
                         </div>
-                    </div>
-                    <div class="flex-box news-arts-food-music">
+                    </article>
+                    <article class="flex-box news-arts-food-music">
                         <div class="img-wrapper">
                             <img src="images/smallArticlePlaceHolder.jpeg" class="pointer-on-hover small-article">
                         </div>
                         <div class="title-wrapper">
                             <h3 class="title-style">Et harum quidem rerum facilis est et expedita distinctio</h3>
                         </div>
-                    </div>
+                    </article>
                     <button class="more music-button"> MORE MUSIC > </button>
                     <nav class="music-nav">
                         <ul>
@@ -839,7 +839,7 @@
                     <p>Di Lorem Ipsum | 24 Aprile, 2025</p>
                 </article>
             </div>
-        </section>
+        </section> <!-- Articoli "trending" -->
         <section id="trending-slideshows">
             <div class="head article-grid trending-slideshows-grid">
                 <span class="divider grid-divider trending-slideshows"></span>
@@ -868,8 +868,83 @@
                     <p>Di Lorem Ipsum | 29 Aprile, 2025</p>
                 </article>
             </div>
-        </section>
+        </section> <!-- Articoli "trending slideshows" -->
+        <section id="best-digital-and-guides">
+            <div class="two-column-grid best-digital-and-guides">
+                <div id="best-of" class="category-div best-of-div">
+                    <div class="head">
+                        <span class="divider best-of-orlando"></span>
+                        <h3 class="article-grid-title">BEST OF ORLANDO</h3>
+                        <span class="divider best-of-orlando"></span>
+                    </div>
+                    <div class="flex-box best-of-box">
+                        <div class="img-wrapper">
+                            <img src="images/bestOfPlaceHolder.jpeg" class="pointer-on-hover">
+                        </div>
+                        <div class="list-wrapper">
+                            <ul>
+                                <li><h3 class="title-style">DRINKING + NIGHTLIFE</h3></li>
+                                <li><h3 class="title-style">ARTS + ENTERTAINMENT</h3></li>
+                                <li><h3 class="title-style">LOCAL NOTABLES</h3></li>
+                                <li><h3 class="title-style">FOOD + DINING</h3></li>
+                                <li><h3 class="title-style">SERVICES</h3></li>
+                                <li><h3 class="title-style">ATTRACTIONS + RECREATION</h3></li>
+                                <li><h3 class="title-style">CITY LIFE</h3></li>
+                                <li><h3 class="title-style">HEALTH, BEAUTY + WELLNESS</h3></li>
+                                <li><h3 class="title-style">LOCAL MUSIC</h3></li>
+                                <li><h3 class="title-style">SHOPPING + RETAIL</h3></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="digital-issue" class="category-div digital-issue-div">
+                    <div class="head">
+                        <span class="divider digital-issue"></span>
+                        <h3 class="article-grid-title">DIGITAL ISSUE</h3>
+                        <span class="divider digital-issue"></span>
+                    </div>
+                    <h3 class="digital-issue-date">24 APRILE 2025</h3>
+                    <div><!--TODO oggetto per slideshow di placeholder--></div>
+                    <!-- <button> VIEW MORE ISSUE > </button> ... e css -->
+                </div>
+                <div id="orlando-guides" class="category-div orlando-guides-div">
+                    <div class="head">
+                        <span class="divider orlando-guides"></span>
+                        <h3 class="article-grid-title">ORLANDO GUIDES</h3>
+                        <span class="divider orlando-guides"></span>
+                    </div>
+                    <div class="guides-grid">
+                        <article class="card">
+                            <img src="images/firstGuideCardPlaceHolder.jpeg">
+                            <button class="orange-button"></button>
+                            <button class="gray-button">CITY GUIDE</button>
+                        </article>
+                        <article class="card">
+                            <img src="images/thirdGuideCardPlaceHolder.jpeg"> <!-- terza card per la struttura della grid -->
+                            <button class="orange-button"></button>
+                            <button class="gray-button">BITE</button>
+                        </article>
+                        <article class="card">
+                            <img src="images/secondGuideCardPlaceHolder.jpeg">
+                            <button class="orange-button"></button>
+                            <button class="gray-button"> NEWCOMERS GUIDE</button>
+                        </article>
+                        <article class="card">
+                            <img src="images/fourthGuideCardPlaceHolder.jpeg">
+                            <button class="orange-button"></button>
+                            <button class="gray-button">SUMMER GUIDE</button> <!-- TODO sposta il bottone -->
+                        </article>
+                    </div>
+                    <button class="more guides"> VIEW MORE GUIDES ></button>
+                </div>
+            </div>
+        </section> <!-- Articoli "best of orlando", "digital issue", "orlando guides" -->
+        <section id="ANNad"></section> <!--TODO section per zona ANNWire.com-->
+        <section id="around-the-web"></section> <!-- TODO section per zona Around the Web -->
     </main>
+
+    <footer></footer> <!-- TODO footer in fondo alla pagina -->
 </body>
 </html>
 
+<!--TODO una volta terminato il sito pensare al lato responsive-->
