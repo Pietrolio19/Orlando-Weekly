@@ -101,7 +101,8 @@
 }
 
 .main-content {
-    padding-left:clamp(235px,4vw,245px);
+    margin-top: clamp(16px, 30px, 70px);
+    padding-left:clamp(245px,4vw,255px);
     padding-right: clamp(235px, 4vw, 245px);
 }
 
@@ -789,4 +790,134 @@
 
 .ANN-article-text-wrapper h3 {
     margin: 0;
+}
+
+/* Around the Web */
+
+.around-the-web-head {}
+
+.around-the-web-title {
+    color: #313a79;
+    font-size: 22px;
+}
+
+.blue-text-on-hover:hover {
+    cursor: pointer;
+}
+
+.blue-text-on-hover:hover .blue-text {
+    color: #164fb5;
+}
+
+.blue-text-on-hover h4 {
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin:0;
+    color: #333;
+}
+
+.blue-text-on-hover p {
+    margin-top: 10px;
+}
+
+/* footer */
+
+/* site summary */
+
+.site-footer{
+    padding-left:clamp(235px,4vw,245px);
+    padding-right: clamp(235px, 4vw, 245px);
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(50px,1fr));
+    max-width:1200px;
+    margin-top: 80px;
+}
+
+.footer-column ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.footer-column li {
+    color: #9c9c9c;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.footer-col a:hover{
+    color:#f7941e;
+}
+
+.column-title {
+    margin: 20px 0 6px 0;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Open Sans Condensed",sans-serif;
+}
+
+/* chava communications */
+
+.chava-div {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-top: 50px;
+}
+
+.chava-text-wrapper {
+    text-align: center;
+}
+
+.chava-text-wrapper h3 {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: #444;
+
+}
+
+.chava-text-wrapper p {
+    margin-top: 2px;
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #444;
+}
+
+.chava {
+    margin-left: 60px; /* TODO trova un altro modo */
+}
+
+/* final div */
+
+.final-div h3 {
+    margin: 30px 0 5px 0;
+}
+
+.final-div p {
+    margin:0;
+}
+
+.socials-img {
+    margin-top: 6px;
+}
+
+/* copyright div*/
+
+.copyright-div {
+    text-align: center;
+}
+
+.copyright {
+    font-size: 16px;
+}
+
+.foundation {
+    font-size: 10px;
 }
