@@ -130,7 +130,7 @@
         </nav>
     </div>
 
-    <main> <!-- TODO modificare la struttura: margin-left=0 per tutti gli elementi -> è il main che contiene tutto e lo distanzia a sx e a dx -->
+    <main class="main-content">
         <section id="hero">
             <div class="flex-box"> <!-- div per layout main article e events -->
                 <article class="main-article">
@@ -904,8 +904,13 @@
                         <span class="divider digital-issue"></span>
                     </div>
                     <h3 class="digital-issue-date">24 APRILE 2025</h3>
-                    <div><!--TODO oggetto per slideshow di placeholder--></div>
-                    <!-- <button> VIEW MORE ISSUE > </button> ... e css -->
+                    <div class="slider">
+                        <img src="images/lorem-ipsum-2.jpg" class="slide active">
+                        <img src="images/lorem-ipsum-3.png" class="slide">
+                        <button class="arrow prev">‹</button>
+                        <button class="arrow next">›</button>
+                    </div>
+                    <button class="more issue"> VIEW MORE ISSUE > </button>
                 </div>
                 <div id="orlando-guides" class="category-div orlando-guides-div">
                     <div class="head">
@@ -939,7 +944,71 @@
                 </div>
             </div>
         </section> <!-- Articoli "best of orlando", "digital issue", "orlando guides" -->
-        <section id="ANNad"></section> <!--TODO section per zona ANNWire.com-->
+        <section id="ANNad">
+            <div class="ANN-div">
+                <div class="ANN-header">
+                    <div class="ANN-img-wrapper">
+                        <img src="images/ANNwirePlaceHolder.jpeg">
+                    </div>
+                    <div class="ANN-h3-wrapper">
+                        <h3>Get the Best Local Journalism in North America in your Inbox</h3>
+                    </div>
+                    <div class="ANN-button-wrapper">
+                        <button class="ANN-button">Sign Up Now</button>
+                    </div>
+                </div>
+                <div class="ANN-grid">
+                    <article class="flex-box ANN-article">
+                        <div class="ANN-article-img-wrapper">
+                            <img src="images/ANNArticlePlaceHolder.jpeg">
+                        </div>
+                        <div class="ANN-article-text-wrapper">
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                        </div>
+                    </article>
+                    <article class="flex-box ANN-article">
+                        <div class="ANN-article-img-wrapper">
+                            <img src="images/ANNArticlePlaceHolder.jpeg">
+                        </div>
+                        <div class="ANN-article-text-wrapper">
+                            <h3>Ut enim ad minim veniam</h3>
+                        </div>
+                    </article>
+                    <article class="flex-box ANN-article">
+                        <div class="ANN-article-img-wrapper">
+                            <img src="images/ANNArticlePlaceHolder.jpeg">
+                        </div>
+                        <div class="ANN-article-text-wrapper">
+                            <h3>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</h3>
+                        </div>
+                    </article>
+                    <article class="flex-box ANN-article">
+                        <div class="ANN-article-img-wrapper">
+                            <img src="images/ANNArticlePlaceHolder.jpeg">
+                        </div>
+                        <div class="ANN-article-text-wrapper">
+                            <h3>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</h3>
+                        </div>
+                    </article>
+                    <article class="flex-box ANN-article">
+                        <div class="ANN-article-img-wrapper">
+                            <img src="images/ANNArticlePlaceHolder.jpeg">
+                        </div>
+                        <div class="ANN-article-text-wrapper">
+                            <h3>Excepteur sint occaecat cupidatat non proident</h3>
+                        </div>
+                    </article>
+                    <article class="flex-box ANN-article">
+                        <div class="ANN-article-img-wrapper">
+                            <img src="images/ANNArticlePlaceHolder.jpeg">
+                        </div>
+                        <div class="ANN-article-text-wrapper">
+                            <h3>Sunt in culpa qui officia deserunt mollit anim id est laborum</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
         <section id="around-the-web"></section> <!-- TODO section per zona Around the Web -->
     </main>
 

@@ -100,13 +100,16 @@
     display: block;
 }
 
+.main-content {
+    padding-left:clamp(235px,4vw,245px);
+    padding-right: clamp(235px, 4vw, 245px);
+}
+
 /* main article */
 
 .flex-box { /* per affiancare le div*/
     display: flex;
     gap: 24px;
-    margin-left: 235px;
-    margin-top: 20px;
 }
 
 .pointer-on-hover:hover {
@@ -116,7 +119,7 @@
 .main-article-title {
     margin: 0;
     font-size: 30px;
-    width: 100%;
+    /*width: 100%;*/
 }
 
 .main-article-title:hover {
@@ -375,9 +378,7 @@
 
 /* the latest */
 
-.article-grid {
-    margin: 50px 0 0 235px;
-}
+.article-grid {}
 
 .article-grid-title {
     margin: 0;
@@ -399,7 +400,6 @@
 }
 
 .grid-layout {
-    margin: 0 245px 0 235px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 24px;
@@ -419,9 +419,8 @@
 
 .two-column-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colonne */
+    grid-template-columns: repeat(2, 1fr);
     gap: 32px;
-    margin: 50px 0 0 225px;
     padding: 32px 16px;
 }
 
@@ -578,7 +577,6 @@
 .best-digital-and-guides {
     grid-template-columns: 500px 500px;
     gap: 1px;
-    margin-left: 225px;
 }
 
 .best-of-orlando {
@@ -614,6 +612,52 @@
     font-size: 16px;
     color: #444;
     margin-top: 3px;
+    margin-bottom: 0;
+}
+
+/* slider */
+
+.slider {
+    position: relative;
+    width: 480px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.active {
+    display: block;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: black;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.arrow.prev {
+    left: 10px;
+}
+
+.arrow.next {
+    right: 10px;
+}
+
+.issue {
+    width: 35%;
 }
 
 .orlando-guides {
@@ -681,4 +725,68 @@
 .guides {
     margin-top: 20px;
     width: clamp(140px, 35vw, 180px);
+}
+
+/* ANNWire */
+
+.ANN-div {
+    border: 10px solid #ccc;
+    padding: 26px 30px 26px 40px;
+    border-radius: 14px;
+    box-sizing: border-box;
+}
+
+.ANN-header {
+    display: flex;
+    gap: clamp(1px, 38px, 50px);
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.ANN-header h3 {
+    width: clamp(300px, 35vw, 400px);
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+}
+
+.ANN-button {
+    color: white;
+    background-color: #5d72c0;
+    padding: 15px 25px 15px 25px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.ANN-button:hover {
+    cursor: pointer;
+}
+
+.ANN-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: clamp(20px,4vw,32px);
+    max-width: 1200px;
+    margin-top: 150px;
+    padding: 0;
+}
+
+.ANN-article {
+    align-items: flex-start;
+}
+
+.ANN-article-img-wrapper {
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    padding: 6px;
+    line-height: 0;
+    align-items:center;
+    justify-content:center;
+}
+
+.ANN-article-text-wrapper h3 {
+    margin: 0;
 }
