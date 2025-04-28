@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
     <script src="index.js" defer></script>
     <title>Orlando Weekly</title>
+
 </head>
 <body>
     <header>
@@ -112,7 +115,7 @@
                     </div>
                 </li>
                 <li>SLIDESHOWS</li>
-                <li>SUPPORT
+                <li class="support">SUPPORT
                     <div class="dropdown">
                         <ul>
                             <li> Support </li>
@@ -125,7 +128,20 @@
                     </div>
                 </li>
                 <li><img src="images/person_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" class="pointer-on-hover"></li>
-                <li><img src="images/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" class="pointer-on-hover"></li> <!-- TODO aggiungere menu a tendina -->
+                <li><img src="images/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" class="pointer-on-hover">
+                    <div class="dropdown search">
+                        <ul>
+                            <li>
+                                <input type="text" placeholder="Enter Keywords...">
+                            </li>
+                            <li>in Article & Posts</li>
+                            <li>in Slideshows</li>
+                            <li>in Events</li>
+                            <li>in Locations</li>
+                            <li>All</li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
         </nav>
     </div>
@@ -291,7 +307,6 @@
                                 </li>
                                 <li>
                                     <input type="text" placeholder="ENTER KEYWORDS...">
-                                    <!--TODO aggiungere immagine lente-->
                                     <button class="go-button"> GO </button>
                                 </li>
                             </ul>
@@ -376,7 +391,6 @@
                                 </li>
                                 <li>
                                     <input type="text" placeholder="ENTER KEYWORDS...">
-                                    <!--TODO aggiungere immagine lente-->
                                     <button class="go-button"> GO </button>
                                 </li>
                             </ul>
@@ -611,7 +625,6 @@
                                 </li>
                                 <li>
                                     <input type="text" placeholder="ENTER KEYWORDS...">
-                                    <!--TODO aggiungere immagine lente-->
                                     <button class="go-button"> GO </button>
                                 </li>
                             </ul>
@@ -921,23 +934,23 @@
                     <div class="guides-grid">
                         <article class="card">
                             <img src="images/firstGuideCardPlaceHolder.jpeg">
-                            <button class="orange-button"></button>
+                            <button class="orange-button">CITY GUIDE</button>
                             <button class="gray-button">CITY GUIDE</button>
                         </article>
                         <article class="card">
                             <img src="images/thirdGuideCardPlaceHolder.jpeg"> <!-- terza card per la struttura della grid -->
-                            <button class="orange-button"></button>
+                            <button class="orange-button">BITE</button>
                             <button class="gray-button">BITE</button>
                         </article>
                         <article class="card">
                             <img src="images/secondGuideCardPlaceHolder.jpeg">
-                            <button class="orange-button"></button>
-                            <button class="gray-button"> NEWCOMERS GUIDE</button>
+                            <button class="orange-button">NEWCOMERS GUIDE</button>
+                            <button class="gray-button">NEWCOMERS GUIDE</button>
                         </article>
                         <article class="card">
                             <img src="images/fourthGuideCardPlaceHolder.jpeg">
-                            <button class="orange-button"></button>
-                            <button class="gray-button">SUMMER GUIDE</button> <!-- TODO sposta il bottone -->
+                            <button class="orange-button">SUMMER GUIDE</button>
+                            <button class="gray-button">SUMMER GUIDE</button>
                         </article>
                     </div>
                     <button class="more guides"> VIEW MORE GUIDES ></button>
@@ -948,7 +961,7 @@
             <div class="ANN-div">
                 <div class="ANN-header">
                     <div class="ANN-img-wrapper">
-                        <img src="images/ANNwirePlaceHolder.jpeg">
+                        <img src="images/ANNwirePlaceHolder.jpeg" class="pointer-on-hover">
                     </div>
                     <div class="ANN-h3-wrapper">
                         <h3>Get the Best Local Journalism in North America in your Inbox</h3>
@@ -958,52 +971,58 @@
                     </div>
                 </div>
                 <div class="ANN-grid">
-                    <article class="flex-box ANN-article">
+                    <article class="flex-box ANN-article blue-text-on-hover">
                         <div class="ANN-article-img-wrapper">
-                            <img src="images/ANNArticlePlaceHolder.jpeg">
+                            <img src="images/ANNArticlePlaceHolder.jpeg" class="pointer-on-hover">
                         </div>
                         <div class="ANN-article-text-wrapper">
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                            <h3 class="blue-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                            <p>Lorem Ipsum / 29 Aprile 2025</p>
                         </div>
                     </article>
-                    <article class="flex-box ANN-article">
+                    <article class="flex-box ANN-article blue-text-on-hover">
                         <div class="ANN-article-img-wrapper">
-                            <img src="images/ANNArticlePlaceHolder.jpeg">
+                            <img src="images/ANNArticlePlaceHolder.jpeg" class="pointer-on-hover">
                         </div>
                         <div class="ANN-article-text-wrapper">
-                            <h3>Ut enim ad minim veniam</h3>
+                            <h3 class="blue-text">Ut enim ad minim veniam</h3>
+                            <p>Lorem Ipsum / 29 Aprile 2025</p>
                         </div>
                     </article>
-                    <article class="flex-box ANN-article">
+                    <article class="flex-box ANN-article blue-text-on-hover">
                         <div class="ANN-article-img-wrapper">
-                            <img src="images/ANNArticlePlaceHolder.jpeg">
+                            <img src="images/ANNArticlePlaceHolder.jpeg" class="pointer-on-hover">
                         </div>
                         <div class="ANN-article-text-wrapper">
-                            <h3>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</h3>
+                            <h3 class="blue-text">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</h3>
+                            <p>Lorem Ipsum / 29 Aprile 2025</p>
                         </div>
                     </article>
-                    <article class="flex-box ANN-article">
+                    <article class="flex-box ANN-article blue-text-on-hover">
                         <div class="ANN-article-img-wrapper">
-                            <img src="images/ANNArticlePlaceHolder.jpeg">
+                            <img src="images/ANNArticlePlaceHolder.jpeg" class="pointer-on-hover">
                         </div>
                         <div class="ANN-article-text-wrapper">
-                            <h3>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</h3>
+                            <h3 class="blue-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</h3>
+                            <p>Lorem Ipsum / 29 Aprile 2025</p>
                         </div>
                     </article>
-                    <article class="flex-box ANN-article">
+                    <article class="flex-box ANN-article blue-text-on-hover">
                         <div class="ANN-article-img-wrapper">
-                            <img src="images/ANNArticlePlaceHolder.jpeg">
+                            <img src="images/ANNArticlePlaceHolder.jpeg" class="pointer-on-hover">
                         </div>
                         <div class="ANN-article-text-wrapper">
-                            <h3>Excepteur sint occaecat cupidatat non proident</h3>
+                            <h3 class="blue-text">Excepteur sint occaecat cupidatat non proident</h3>
+                            <p>Lorem Ipsum / 29 Aprile 2025</p>
                         </div>
                     </article>
-                    <article class="flex-box ANN-article">
+                    <article class="flex-box ANN-article blue-text-on-hover">
                         <div class="ANN-article-img-wrapper">
-                            <img src="images/ANNArticlePlaceHolder.jpeg">
+                            <img src="images/ANNArticlePlaceHolder.jpeg" class="pointer-on-hover">
                         </div>
                         <div class="ANN-article-text-wrapper">
-                            <h3>Sunt in culpa qui officia deserunt mollit anim id est laborum</h3>
+                            <h3 class="blue-text">Sunt in culpa qui officia deserunt mollit anim id est laborum</h3>
+                            <p>Lorem Ipsum / 29 Aprile 2025</p>
                         </div>
                     </article>
                 </div>

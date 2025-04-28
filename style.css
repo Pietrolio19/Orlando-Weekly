@@ -1,4 +1,5 @@
 /* header */
+
 .bar {
     background-color: #f7941e;
     height: 45px;
@@ -42,7 +43,7 @@
 .navigation .nav-bar > ul {
     list-style: none;
     display: flex;
-    gap: 23px;
+    gap: 16px;
     margin: 0;
     padding: 0;
 }
@@ -53,6 +54,7 @@
     font-size: 16px;
     font-weight: bold;
     font-family: "Open Sans Condensed", sans-serif;
+    padding: 0 3px 0 3px;
 }
 
 .nav-bar li:hover {
@@ -100,10 +102,28 @@
     display: block;
 }
 
+.support {
+    background-color: #f7941e;
+    color: white;
+}
+
+.dropdown.search li:first-child,
+.dropdown.search li:first-child:hover{
+    background-color: #fff;
+    cursor: default;
+    height: 40px;
+}
+
+.dropdown.search input {
+    height: 80%;
+    width: 95%;
+    border: 1px solid #9c9c9c;
+}
+
 .main-content {
     margin-top: clamp(16px, 30px, 70px);
-    padding-left:clamp(245px,4vw,255px);
-    padding-right: clamp(235px, 4vw, 245px);
+    padding-left:clamp(16px,16vw,235px);
+    padding-right: clamp(16px, 16vw, 245px);
 }
 
 /* main article */
@@ -672,6 +692,7 @@
     max-width: 980px;
     margin: 20px auto 0;
     padding: 0 16px;
+    align-items: end;
 }
 
 .card {
@@ -693,8 +714,8 @@
 
 .card .orange-button, .card .gray-button {
     position: absolute;
-    padding: 14px 32px;
-    font-size: 8px;
+    padding: 12px 16px;
+    font-size: 10px;
     color: white;
     font-weight: bold;
     border: none;
@@ -709,17 +730,11 @@
 }
 
 .gray-button {
-    background-color: #9b9b9b;
+    position: absolute;
     bottom: 15px;
     right: 15px;
     z-index: 2;
-    padding: 0;
-    /* necessario per avere la forma corretta del bottone grigio */
-    width: 14px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #9b9b9b;
     white-space: nowrap;
 }
 
@@ -790,6 +805,11 @@
 
 .ANN-article-text-wrapper h3 {
     margin: 0;
+    font-weight: 300;
+}
+
+.ANN-article-text-wrapper p {
+    font-size: 12px;
 }
 
 /* Around the Web */
@@ -861,6 +881,11 @@
     font-family: "Open Sans Condensed",sans-serif;
 }
 
+.footer-column li:hover {
+    cursor: pointer;
+    color: #f7941e;
+}
+
 /* chava communications */
 
 .chava-div {
@@ -920,4 +945,21 @@
 
 .foundation {
     font-size: 10px;
+}
+
+/* breakpoints */
+
+@media screen and (max-width: 768px) {
+    .main-content {
+        padding-left: clamp(16px, 5vw, 50px);
+        padding-right: clamp(16px, 5vw, 50px);
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .flex-box {
+        flex-direction: column;
+    }
 }
