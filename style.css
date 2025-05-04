@@ -19,16 +19,19 @@
     cursor: pointer;
 }
 
-/* hamburger */
+/* barra di navigazione */
 
 .hamburger {
     display: none;
-    height: 100px;
-    border-bottom: 1px solid black;
-    margin-top: 30px;
 }
 
-/* barra di navigazione */
+.hamburger-list {
+    display: none;
+}
+
+.pop-up {
+    display: none;
+}
 
 .navigation { /* div per la barra di navigazione */
     position: sticky;
@@ -797,7 +800,6 @@
     flex-shrink: 0;
 }
 
-
 .ANN-article-text-wrapper h3 {
     margin: 0;
     font-weight: 300;
@@ -949,7 +951,180 @@
 /* breakpoints */
 
 @media screen and (max-width: 1000px) {
-    img {
+    /* definizione elementi solo dei breakpoints */
+
+    .hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 35px 0 5px 0;
+        border: 1px solid black;
+        margin-top: 15px;
+    }
+
+    .ham_menu,.ham_search {
+        width: fit-content;
+        background-color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 0;
+    }
+
+    .ham_menu img {
+        width: 40px;
+    }
+
+    .ham_menu:hover {
+        background-color: #444;
+    }
+
+    body.no-scroll{
+        overflow: hidden    ;
+    }
+
+    .hamburger-list {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30%;
+        height: 100%;
+        background: white;
+        z-index: 1000;
+        padding: 20px;
+    }
+
+    .hamburger-list ul {
+        margin: 0;
+        list-style: none;
+        padding: 5px;
+
+    }
+
+    .hamburger-list.open {
+        display: block;
+    }
+
+    .hamburger-list-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger-list-item h5 {
+        padding: 5px;
+        font-size: 15px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .hamburger-list-item:hover {
+        background-color: #f7941e;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 999;
+    }
+
+    .overlay.active {
+        display: block;
+    }
+
+    .ham_search img {
+        width: 50px;
+    }
+
+    .ham_search:hover {
+        background-color: #444;
+    }
+
+    .pop-up {
+        display: none;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+    }
+
+    .pop-up-div {
+        background: white;
+        margin: 50px auto;
+        padding: 20px;
+        width: 90%;
+        max-width: 500px;
+        position: relative;
+    }
+
+    .pop-up-div h2 {
+        margin: 0 0 20px 0;
+        font-family: Lato, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        color: #333;
+    }
+
+    .pop-up-div input {
+        justify-self: center;
+        width: 100%;
+        height: 35px;
+        border: 1px solid #ccc;
+    }
+
+    .pop-up-div input::placeholder {
+        padding: 10px;
+        font-size: 16px;
+        color: #9c9c9c;
+    }
+
+    .pop-up-div ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .pop-up-div li {
+        color: black;
+        font-weight: 300;
+        font-size: 17px;
+        padding: 5px 5px 5px 10px;
+        font-family: Montserrat, Helvetica, sans-serif;
+    }
+
+    .pop-up-div li:hover {
+        background-color: #f7941e;
+    }
+
+    .close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        font-size: 24px;
+        color: #a8a8a8;
+    }
+
+    .pop-up.open {
+        display: block;
+    }
+
+    .pop-up-go {
+        justify-self: end;
+        align-self: end;
+        background-color: #606060;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        padding: 6px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    /* modifica elementi css base */
+
+    .main-content img {
         max-width: 100%;
         width: 100%;
         height: auto;
@@ -967,12 +1142,8 @@
         padding-right: clamp(16px, 5vw, 20px);
     }
 
-    .logo {
+    .main-content .logo{
         display: none;
-    }
-
-    .hamburger {
-        display: flex;
     }
 
     .navigation {
@@ -1048,6 +1219,11 @@
     .main-content img {
         width: 90vw;
         margin: 0 auto;
+    }
+
+    .ham_logo {
+        width: 70%;
+        margin-left: 50px;
     }
 
     .limit {

@@ -41,3 +41,44 @@ document.addEventListener('DOMContentLoaded', () => {
     next.addEventListener('click', () => show(index + 1));
     prev.addEventListener('click', () => show(index - 1));
 });
+
+//javascript per menu hamburger
+document.addEventListener('DOMContentLoaded', () => {
+    const menu = document.getElementById('hamburger-list-menu');
+    const button = document.getElementById('hamburger-menu-button');
+    const overlay = document.getElementById('hamburger-menu-overlay');
+
+    button.addEventListener('click', () => {
+        menu.classList.add('open');
+        overlay.classList.add('active');
+        document.body.classList.add('no-scroll'); //impedisce di scorrere
+    });
+
+    overlay.addEventListener('click', () => {
+        menu.classList.remove('open');
+        overlay.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+    })
+});
+
+//javascript per il pop up della ricerca su mobile
+document.addEventListener('DOMContentLoaded', () => {
+    const searchModal = document.getElementById('search-pop-up');
+    const searchToggle = document.getElementById('open-pop-up');
+    const closeBtn = document.querySelector('.close');
+
+    searchToggle.addEventListener('click', () => {
+        searchModal.classList.add('open');
+    });
+
+    closeBtn.addEventListener('click', () => {
+        searchModal.classList.remove('open');
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === searchModal) {
+            searchModal.classList.remove('open');
+        }
+    });
+});
+
