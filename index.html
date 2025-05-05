@@ -239,8 +239,9 @@
                 <div class="events-navigation">
                     <nav class="event-nav">
                         <ul>
-                            <li class="right-bar"><img src="images/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-                                                       alt="search"> All today's events
+                            <li class="right-bar">
+                                <img src="images/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="search" class="events-search">
+                                All today's events
                             </li>
                             <li> Staff Picks</li>
                         </ul>
@@ -810,7 +811,7 @@
                         <h3 class="title-style">Quis autem vel eum iure reprehenderit qui in ea voluptate</h3>
                     </div>
                 </article>
-                <button class="more"> MORE NEWS ></button>
+                <button class="more news-button"> MORE NEWS ></button>
                 <nav class="more-info-nav">
                     <ul>
                         <li class="right-bar nav-style title-style">ORLANDO AREA NEWS</li>
@@ -958,7 +959,7 @@
     <section id="trending-slideshows">
         <div class="head article-grid trending-slideshows-grid">
             <span class="divider grid-divider trending-slideshows"></span>
-            <h3 class="article-grid-title"> TRENDING SLIDESHOWS </h3>
+            <h3 class="article-grid-title trending-mobile"> TRENDING SLIDESHOWS </h3>
             <span class="divider grid-divider trending-slideshows"></span>
         </div>
         <div class="grid-layout">
@@ -990,7 +991,7 @@
             <div id="best-of" class="category-div best-of-div">
                 <div class="head">
                     <span class="divider best-of-orlando"></span>
-                    <h3 class="article-grid-title">BEST OF ORLANDO</h3>
+                    <h3 class="article-grid-title best-of-mobile">BEST OF ORLANDO</h3>
                     <span class="divider best-of-orlando"></span>
                 </div>
                 <div class="flex-box best-of-box">
@@ -1031,15 +1032,17 @@
             <div id="orlando-guides" class="category-div orlando-guides-div">
                 <div class="head">
                     <span class="divider orlando-guides"></span>
-                    <h3 class="article-grid-title">ORLANDO GUIDES</h3>
+                    <h3 class="article-grid-title orlando-guides-mobile">ORLANDO GUIDES</h3>
                     <span class="divider orlando-guides"></span>
                 </div>
                 <div class="guides-grid">
                     <article class="card">
                         <img src="images/firstGuideCardPlaceHolder.jpeg" alt="first-giude">
-                        <button class="orange-button">CITY GUIDE</button>
-                        <button class="gray-button">CITY GUIDE</button>
-                    </article>
+                        <div class="orange-gray-layout">
+                            <button class="orange-button">CITY GUIDE</button>
+                            <button class="gray-button">CITY GUIDE</button>
+                        </div>
+                        </article>
                     <article class="card">
                         <img src="images/thirdGuideCardPlaceHolder.jpeg" alt="third-giude">
                         <!-- terza card per la struttura della grid -->
@@ -1058,7 +1061,7 @@
                     </article>
                 </div>
                 <button class="more guides"> VIEW MORE GUIDES ></button>
-            </div> <!-- TODO Bottoni e immagini delle card-->
+            </div>
         </div>
     </section> <!-- Articoli "best of orlando", "digital issue", "orlando guides" -->
     <section id="ANNad">

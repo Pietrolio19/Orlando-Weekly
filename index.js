@@ -50,13 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     button.addEventListener('click', () => {
         menu.classList.add('open');
-        overlay.classList.add('active');
+        overlay.classList.add('exist');
         document.body.classList.add('no-scroll'); //impedisce di scorrere
     });
 
     overlay.addEventListener('click', () => {
         menu.classList.remove('open');
-        overlay.classList.remove('active');
+        overlay.classList.remove('exist');
         document.body.classList.remove('no-scroll');
     })
 });
