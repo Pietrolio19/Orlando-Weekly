@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap"
+          rel="stylesheet">
     <script src="index.js" defer></script>
     <title>Orlando Weekly</title>
 
 </head>
-<body class="limit">
+<body id="main-content" class="limit">
 <div class="hamburger"> <!-- TODO Menu Hamburger-->
     <button id="hamburger-menu-button" class="ham_menu">
         <img src="images/menu_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="hamburger">
@@ -23,41 +24,42 @@
     </button>
 </div> <!-- Menu in alto per mobile -->
 
-<div id="hamburger-menu-overlay" class="overlay"></div> <!-- Div necessaria per permettere all'utente di chiudere il menu a tendina premendo fuori da esso -->
+<div id="hamburger-menu-overlay" class="overlay"></div>
+<!-- Div necessaria per permettere all'utente di chiudere il menu a tendina premendo fuori da esso -->
 
 <div id="hamburger-list-menu" class="hamburger-list">
     <ul>
         <li class="hamburger-list-item sub-menu">
-            <h5 class="submenu-toggle">NEWS</h5>
+            <h5 id="submenu-toggle" data-submenu="submenu-news">NEWS</h5>
         </li>
-        <li class="hamburger-list-item sub-menu">
+        <li class="hamburger-list-item">
             <h5>ARTS + CULTURE</h5>
         </li>
-        <li class="hamburger-list-item sub-menu">
+        <li class="hamburger-list-item">
             <h5>FOOD + DRINK</h5>
         </li>
-        <li class="hamburger-list-item sub-menu">
+        <li class="hamburger-list-item">
             <h5>MUSIC</h5>
         </li>
-        <li class="hamburger-list-item sub-menu">
+        <li class="hamburger-list-item">
             <h5>MOVIES</h5>
         </li>
-        <li class="hamburger-list-item sub-menu">
+        <li class="hamburger-list-item">
             <h5>CANNABIS</h5>
         </li>
-        <li class="hamburger-list-item sub-menu">
+        <li class="hamburger-list-item">
             <h5>CALENDAR</h5>
         </li>
-        <li class="hamburger-list-item sub-menu">
+        <li class="hamburger-list-item">
             <h5>BEST OF ORLANDO</h5>
         </li>
-        <li class="hamburger-list-item sub-menu">
+        <li class="hamburger-list-item">
             <h5>SLIDESHOWS</h5>
         </li>
-        <li class="hamburger-list-item sub-menu">
+        <li class="hamburger-list-item">
             <h5>SUPPORT</h5>
         </li>
-        <li class="hamburger-list-item sub-menu">
+        <li class="hamburger-list-item">
             <h5>ABOUT US</h5>
         </li>
     </ul>
@@ -240,7 +242,8 @@
                     <nav class="event-nav">
                         <ul>
                             <li class="right-bar">
-                                <img src="images/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="search" class="events-search">
+                                <img src="images/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="search"
+                                     class="events-search">
                                 All today's events
                             </li>
                             <li> Staff Picks</li>
@@ -1042,7 +1045,7 @@
                             <button class="orange-button">CITY GUIDE</button>
                             <button class="gray-button">CITY GUIDE</button>
                         </div>
-                        </article>
+                    </article>
                     <article class="card">
                         <img src="images/thirdGuideCardPlaceHolder.jpeg" alt="third-giude">
                         <!-- terza card per la struttura della grid -->
