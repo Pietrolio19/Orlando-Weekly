@@ -957,9 +957,13 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 35px 0 5px 0;
-        border: 1px solid black;
-        margin-top: 15px;
+        padding: 5px 0 5px 0;
+        margin-top: 50px;
+        border-bottom: 1px solid black;
+        background-color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
 
     .ham_menu,.ham_search {
@@ -980,18 +984,18 @@
 
     body.no-scroll{
         overflow: hidden    ;
-    }
+    } /* utilizzato da js per rimuovere/reimpostare lo scorrimento della pagina */
 
     .hamburger-list {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
-        width: 30%;
+        width: 40%;
         height: 100%;
         background: white;
         z-index: 1000;
-        padding: 20px;
+        padding: 10px;
     }
 
     .hamburger-list ul {
